@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
 
   color-scheme: light dark;
@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  font-weight: 300;
 }
 
 main {
@@ -46,25 +46,97 @@ main {
 #quiz {
   height: 60%;
   width: 80%;
-  max-width: 1400px;
+  max-width: 1200px;
   background: #282c48;
+  border-radius: 5px;
+}
+
+.header_padding {
+  padding: 1rem 5rem;
+}
+
+.question-info {
+  font-size: .9rem;
+  font-weight: 600;
+  color: #6e749b;
+  padding: 1rem 5rem;
+}
+
+.question {
+  padding: 1rem 5rem;
 }
 
 button {
-  border-radius: 8px;
+  width: 100%;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: unset;
   cursor: pointer;
-  transition: border-color 0.25s;
+  color: #fff;
+  text-align: left;
 }
-button:hover {
-  border-color: #646cff;
+
+@media screen and (width <=720px) and (height<=780px) {
+  #quiz {
+    height: auto;
+    width: 95%;
+  }
+
+  .header_padding {
+    padding: 1rem;
+  }
+
+  .completed-text {
+    display: block;
+  }
+
+  .question-info {
+    padding: 1rem;
+  }
+
+  .question {
+    padding: 1rem;
+  }
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+@media (width<=500px) {
+  #quiz {
+    /* height: auto; */
+    width: 95%;
+  }
+
+  .header_padding {
+    padding: 1rem;
+  }
+
+  .completed-text {
+    display: block;
+  }
+
+  .question-info {
+    padding: 1rem;
+  }
+
+  .question {
+    padding: 1rem;
+  }
+}
+
+@media (height<=640px) {
+  #quiz {
+    height: auto;
+  }
+}
+
+@media (height<=430px) {
+  html {
+    height: auto;
+  }
+
+  body {
+    height: auto;
+  }
 }

@@ -1,0 +1,23 @@
+ul {
+  padding: 0;
+}
+.answer {
+  list-style: none;
+  border: 1px solid #4d5376;
+  margin-bottom: 1rem;
+  transition: border-color 0.5s;
+}
+
+@media (hover: hover) {
+  .answer:hover {
+    border-color: #646cff;
+  }
+}
+
+/* button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  } */
+.correct {
+  border: 2px solid red;
+}

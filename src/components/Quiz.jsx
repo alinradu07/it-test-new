@@ -18,7 +18,8 @@ export default function Quiz() {
   return (
     <div id="quiz">
       <Header />
-      <hr style={{ background: "#4d5376", height: "0.1px", border: 'none' }} />
+      <hr style={{ background: "#4d5376", height: "1px", border: 'none' }} />
+      <div className="question-info"><p>6 ANSWERS LEFT</p></div>
       <Question
         // key={activeQuestionIndex}
         index={activeQuestionIndex}
