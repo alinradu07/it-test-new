@@ -38,6 +38,7 @@ export default function Question({ index }) {
       <Answer
         answerState={answerState}
         onSelect={handleSelectAnswer}
+        selectedAnswer={answer.selectedAnswer}
         answers={[
           can_questions[index].right,
           can_questions[index].wrong1,
