@@ -125,7 +125,7 @@ main {
   }
 }
 
-@media (height<=640px) {
+@media (height<=700px) {
   #quiz {
     height: auto;
   }
