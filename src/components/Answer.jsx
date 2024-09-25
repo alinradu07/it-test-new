@@ -18,11 +18,21 @@ export default function Answer({
         if (answerState === "answered" && isSelected) {
           cssClass = "selected";
         }
+        if (answerState === "answered" && !isSelected) {
+          cssClass = "not-selected";
+        }
+
         if (
           (answerState === "correct" || answerState === "wrong") &&
           isSelected
         ) {
           cssClass = answerState;
+        }
+        if (
+          (answerState === "correct" || answerState === "wrong") &&
+          !isSelected
+        ) {
+          cssClass = "not-selected";
         }
         return (
           <li key={answer} className={classes.answer}>

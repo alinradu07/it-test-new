@@ -5,7 +5,6 @@
 
 .answer button {
   width: 100%;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
@@ -34,6 +33,10 @@
 }
 .answer button.wrong {
   border: 1px solid red;
+}
+
+.answer button.not-selected{
+  border: 1px solid #4d5376;
 }
 
 /* @media (hover: hover) {
