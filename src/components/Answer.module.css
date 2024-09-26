@@ -1,27 +1,35 @@
 .answers {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
+.answer {
+  margin-bottom: 1rem;
+  word-break: break-all;
+}
+
 .answer button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   width: 100%;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  padding: 1rem;
+  border: 2px solid #4d5376;
+  font-size: 1.2rem;
   font-family: inherit;
   background-color: unset;
   cursor: pointer;
   color: #fff;
   text-align: left;
-  border: 1px solid #4d5376;
-  margin-bottom: 1rem;
-  /* transition: border-color 0.5s; */
   transition: all 0.2s ease-in-out;
 }
 
-.answer button:hover,
-.answer button:focus {
-  border-color: #646cff;
+@media (hover: hover) {
+  .answer button:hover,
+  .answer button:focus {
+    border-color: #646cff;
+  }
 }
 
 .answer button.selected {
@@ -29,24 +37,68 @@
 }
 
 .answer button.correct {
-  border: 1px solid #00f5f7;
+  border: 2px solid #00f5f7;
 }
 .answer button.wrong {
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
-.answer button.not-selected{
-  border: 1px solid #4d5376;
+.answer button.not-selected {
+  border: 2px solid #4d5376;
+}
+
+.answer button .circle {
+  position: relative;
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4d5376;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.correct-mark {
+  font-size: 1.7rem;
+  color: #00f5f7;
+}
+
+.wrong-mark {
+  font-size: 1.7rem;
+  color: red;
+}
+
+/* .global-class-name {
+  color: #00f5f7;
+  size: 20px;
+} */
+
+/* .answer button.correct .circle {
+  border-color: #00f5f7;
+  background-color: #00f5f7;
+} */
+
+/* .answer button.wrong .circle {
+  border-color: red;
+  background-color: red;
+} */
+
+/* .answer button.correct .circle .checkMark {
+  position: absolute;
+  transform: rotate(50deg) translate(-50%, -50%);
+  left: 25%;
+  top: 48%;
+  height: 10px;
+  width: 5px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+} */
+
+.answer button .text {
+  width: 90%;
+  margin: 0;
 }
 
 /* @media (hover: hover) {
-  .answer:hover {
-    border-color: #646cff;
-  }
-}
-
-
-@media (hover: hover) {
   .answer.disabled {
     pointer-events: none;
   }

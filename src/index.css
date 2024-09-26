@@ -44,7 +44,7 @@ main {
 }
 
 #quiz {
-  height: 60%;
+  min-height: 60%;
   width: 80%;
   max-width: 1200px;
   background: #282c48;
@@ -104,7 +104,7 @@ main {
 
 @media (width<=500px) {
   #quiz {
-    /* height: auto; */
+    height: auto;
     width: 95%;
   }
 

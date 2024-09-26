@@ -30,8 +30,6 @@ export default function Question({ index }) {
   } else if (answer.selectedAnswer) {
     answerState = "answered";
   }
-  console.log(answerState);
-
   return (
     <div className="question">
       <h2>{can_questions[index].text}</h2>
