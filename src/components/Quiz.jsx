@@ -2,6 +2,7 @@ import { CAN as can_questions } from "../assets/questions";
 import { useState, useRef } from "react";
 import Header from "./Header";
 import Question from "./Question";
+import Summary from "./Summary";
 
 export default function Quiz() {
   const answerRef = useRef({ answer: "" });
@@ -21,7 +22,7 @@ export default function Quiz() {
   }
 
   if (quizIsComplete) {
-    return <h1>Quiz Complete</h1>;
+    return <Summary userAnswers={userAnswers} />;
   }
   return (
     <div id="quiz">

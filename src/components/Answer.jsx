@@ -1,21 +1,23 @@
 import { IconContext } from "react-icons";
 import { FaCircleXmark } from "react-icons/fa6";
 import { IoMdCheckmarkCircle } from "react-icons/io";
+import { useRef } from "react";
 import classes from "./Answer.module.css";
 
-// className={`${classes.answer} ${classes[cssClass]}`}
-// className={`${classes.answer} ${classes[cssClass]} ${
-//   answerState ? `${classes.disabled}` : ""
-// }`}
 export default function Answer({
   answers,
   onSelect,
   answerState,
   selectedAnswer,
 }) {
+  const shuffledAnswers = useRef();
+  if (!shuffledAnswers.current) {
+    shuffledAnswers.current = [...answers];
+    shuffledAnswers.current.sort(() => Math.random() - 0.5);
+  }
   return (
     <ul className={classes.answers}>
-      {answers.map((answer) => {
+      {shuffledAnswers.current.map((answer) => {
         const isSelected = selectedAnswer === answer;
         let cssClass = "";
         let component = <div className={classes.circle}></div>;
