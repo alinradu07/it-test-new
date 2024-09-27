@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { CAN as can_questions } from "../assets/questions";
 import Answer from "./Answer";
 // import classes from "./Question.module.css";
 
-export default function Question({ index }) {
+const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
   const [answer, setUserAnswer] = useState([
     {
       selectedAnswer: "",
@@ -16,12 +16,13 @@ export default function Question({ index }) {
       selectedAnswer: answer,
       isCorrect: null,
     });
-    // onSelectAnswer(answer);
+    ref.current.answer = answer;
     setTimeout(() => {
       setUserAnswer({
         selectedAnswer: answer,
         isCorrect: can_questions[index].right === answer,
       });
+      onSelectAnswer();
     }, 2000);
   }
   let answerState = "";
@@ -45,4 +46,5 @@ export default function Question({ index }) {
       />
     </div>
   );
-}
+});
+export default Question;
