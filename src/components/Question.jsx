@@ -23,7 +23,7 @@ const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
         isCorrect: can_questions[index].right === answer,
       });
       onSelectAnswer();
-    }, 2000);
+    }, 1000);
   }
   let answerState = "";
   if (answer.selectedAnswer && answer.isCorrect !== null) {

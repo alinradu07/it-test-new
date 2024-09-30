@@ -1,11 +1,15 @@
-import classes from './Header.module.css'
-export default function Header() {
+import classes from "./Header.module.css";
+export default function Header({ quizLength, questionIndex }) {
+  const questionProgress = (questionIndex / quizLength) * 100;
   return (
     <div className={`header_padding ${classes.header}`}>
       <p>IT-TEST</p>
       <div>
-          <p>Total Test: <span className='completed-text'>20% completed</span></p>
-          <progress value="20" max="100"></progress>
+        <p>
+          Total Progress:{" "}
+          <span className="completed-text">{questionProgress}% completed</span>
+        </p>
+        <progress value={questionProgress} max="100"></progress>
       </div>
     </div>
   );

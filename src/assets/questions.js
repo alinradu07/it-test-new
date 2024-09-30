@@ -158,6 +158,7 @@ export const CAN = [
     level: "NOO",
     weight: 50,
   },
+  
 ];
 
 export const PYTHON = [
@@ -283,6 +284,35 @@ export const PYTHON = [
   },
   {
     id: 139,
+    text: 'Ce reprezinta functia "__init__" ?',
+    source1:
+      "https://www.udacity.com/blog/2021/11/__init__-in-python-an-overview.html",
+    source2: "",
+    source3: "",
+    wrong1: "o functie care initializeaza o variabila cu null",
+    wrong2: "o functie care genereaza un nou obiect",
+    right: "un constructor",
+    field: "PYTHON",
+    material: "",
+    level: "NOO",
+    weight: 50,
+  },
+  {
+    id: 144,
+    text: "In python, urmatoarea sintaxa poarta denumirea de?",
+    source1: "https://www.geeksforgeeks.org/ternary-operator-in-python/",
+    source2: "",
+    source3: "",
+    wrong1: "eroare",
+    wrong2: "if else",
+    right: "operator ternal",
+    field: "PYTHON",
+    material: "[cod] <urmare1> if <conditie> else <urmare2>",
+    level: "NOO",
+    weight: 50,
+  },
+  {
+    id: 140,
     text: 'Ce reprezinta functia "__init__" ?',
     source1:
       "https://www.udacity.com/blog/2021/11/__init__-in-python-an-overview.html",

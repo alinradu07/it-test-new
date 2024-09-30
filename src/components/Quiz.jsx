@@ -9,7 +9,9 @@ export default function Quiz() {
   const [isDisabled, setIsDisabled] = useState(true);
   const [userAnswers, setUserAnswers] = useState([]);
   const activeQuestionIndex = userAnswers.length;
-  const quizIsComplete = activeQuestionIndex === can_questions.length;
+  const quizQuestionLength = can_questions.length;
+  const leftAnswers = quizQuestionLength - activeQuestionIndex;
+  const quizIsComplete = activeQuestionIndex === quizQuestionLength;
   function handleSelectAnswer() {
     setUserAnswers((prevUserAnswers) => {
       return [...prevUserAnswers, answerRef.current.answer];
@@ -26,10 +28,15 @@ export default function Quiz() {
   }
   return (
     <div id="quiz">
-      <Header />
+      <Header
+        quizLength={quizQuestionLength}
+        questionIndex={activeQuestionIndex}
+      />
       <hr style={{ background: "#4d5376", height: "1px", border: "none" }} />
       <div className="question-info">
-        <p>6 ANSWERS LEFT</p>
+        <p>
+          {leftAnswers} {leftAnswers > 1 ? "ANSWERS" : "ANSWER"} LEFT
+        </p>
       </div>
       <Question
         ref={answerRef}
