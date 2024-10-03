@@ -1,7 +1,8 @@
+import QuestionImageModal from "./QuestionImageModal";
 import { useState, forwardRef } from "react";
 import { CAN as can_questions } from "../assets/questions";
 import Answer from "./Answer";
-// import classes from "./Question.module.css";
+import classes from "./Question.module.css";
 
 const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
   const [answer, setUserAnswer] = useState([
@@ -34,6 +35,12 @@ const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
   return (
     <div className="question">
       <h2>{can_questions[index].text}</h2>
+      {can_questions[index].material && (
+        <div className={classes["questions-material"]}>
+          <QuestionImageModal question={can_questions[index]} />
+        </div>
+      )}
+
       <Answer
         answerState={answerState}
         onSelect={handleSelectAnswer}
