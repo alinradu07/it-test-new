@@ -1,10 +1,12 @@
 import QuestionImageModal from "./QuestionImageModal";
 import { useState, forwardRef } from "react";
-import { CAN as can_questions } from "../assets/questions";
 import Answer from "./Answer";
 import classes from "./Question.module.css";
 
-const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
+const Question = forwardRef(function Question(
+  { index, onSelectAnswer, questions },
+  ref
+) {
   const [answer, setUserAnswer] = useState([
     {
       selectedAnswer: "",
@@ -21,7 +23,7 @@ const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
     setTimeout(() => {
       setUserAnswer({
         selectedAnswer: answer,
-        isCorrect: can_questions[index].right === answer,
+        isCorrect: questions[index].right === answer,
       });
       onSelectAnswer();
     }, 1000);
@@ -34,10 +36,10 @@ const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
   }
   return (
     <div className="question">
-      <h2>{can_questions[index].text}</h2>
-      {can_questions[index].material && (
+      <h2>{questions[index].text}</h2>
+      {questions[index].material && (
         <div className={classes["questions-material"]}>
-          <QuestionImageModal question={can_questions[index]} />
+          <QuestionImageModal question={questions[index]} />
         </div>
       )}
 
@@ -46,9 +48,9 @@ const Question = forwardRef(function Question({ index, onSelectAnswer }, ref) {
         onSelect={handleSelectAnswer}
         selectedAnswer={answer.selectedAnswer}
         answers={[
-          can_questions[index].right,
-          can_questions[index].wrong1,
-          can_questions[index].wrong2,
+          questions[index].right,
+          questions[index].wrong1,
+          questions[index].wrong2,
         ]}
       />
     </div>

@@ -1,15 +1,15 @@
-import { CAN as can_questions } from "../assets/questions";
 import { useState, useRef } from "react";
 import Header from "./Header";
 import Question from "./Question";
 import Summary from "./Summary";
 
-export default function Quiz() {
+export default function Quiz({ questions }) {
+  console.log(questions);
   const answerRef = useRef({ answer: "" });
   const [isDisabled, setIsDisabled] = useState(true);
   const [userAnswers, setUserAnswers] = useState([]);
   const activeQuestionIndex = userAnswers.length;
-  const quizQuestionLength = can_questions.length;
+  const quizQuestionLength = questions.length;
   const leftAnswers = quizQuestionLength - activeQuestionIndex;
   const quizIsComplete = activeQuestionIndex === quizQuestionLength;
   function handleSelectAnswer() {
@@ -39,6 +39,7 @@ export default function Quiz() {
         </p>
       </div>
       <Question
+        questions={questions}
         ref={answerRef}
         key={activeQuestionIndex}
         index={activeQuestionIndex}
