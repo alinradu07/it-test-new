@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+.info-modal {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: #282c48;
+  color: #fff;
+}
+
+.info-modal[open] {
+  animation: slide-in-from-top 0.35s ease-out;
+}
+
+.info-modal::backdrop {
+  background: #181b32;
+}
+
+.title,
+.credits {
+  text-align: center;
+}
+
+.description {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.credits-name {
+  font-weight: bold;
+  color: #4b22f4;
+}
+
+.info-modal form {
+  text-align: right;
+}
+
+.info-modal button {
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2d4baa;
+  border: 1px solid #2d4baa;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.info-modal button:active {
+  background-color: #2d4baa;
+  border-color: #2d4baa;
+  color: white;
+}
+
+/* @media (hover: hover) {
+  .info-modal button:hover {
+    background-color: #4b22f4;
+    border-color: #4b22f4;
+    color: white;
+  }
+} */
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

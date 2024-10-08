@@ -1,9 +1,7 @@
 import quizCompleteImg from "../assets/quiz-complete.png";
-import { CAN as can_questions } from "../assets/questions";
-
-export default function Summary({ userAnswers }) {
+export default function Summary({ userAnswers, questions }) {
   const correctAnswers = userAnswers.filter(
-    (answer, index) => answer === can_questions[index].right
+    (answer, index) => answer === questions[index].right
   );
   const correctAnswerShare = (correctAnswers.length / userAnswers.length) * 100;
 
@@ -27,7 +25,7 @@ export default function Summary({ userAnswers }) {
           let cssClass = "user-answer";
           if (answer === null) {
             cssClass += " skipped";
-          } else if (answer === can_questions[index].right) {
+          } else if (answer === questions[index].right) {
             cssClass += " correct";
           } else {
             cssClass += " wrong";
@@ -35,7 +33,7 @@ export default function Summary({ userAnswers }) {
           return (
             <li key={index}>
               <h3>{index + 1}</h3>
-              <p className="question">{can_questions[index].text}</p>
+              <p className="question">{questions[index].text}</p>
               <p className={cssClass}>{answer ?? "Skipped"}</p>
             </li>
           );

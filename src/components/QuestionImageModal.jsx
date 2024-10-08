@@ -3,10 +3,9 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 function QuestionImageModal({ question }) {
-  console.log(question)
   let type = question.material.substring(1, 4);
   let url = question.material.substring(5);
-  console.log(type, url)
+  console.log(type, url);
 
   let material = <div></div>;
   if (type === "img") {

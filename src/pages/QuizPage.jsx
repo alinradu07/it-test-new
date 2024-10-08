@@ -15,7 +15,7 @@ export default function QuizPage() {
 }
 
 async function loadQuiz(searchTerm) {
-  const response = await fetch(`http://localhost:3001/${searchTerm}`);
+  const response = await fetch(`http://192.168.1.142:3001/${searchTerm}`);
   if (!response.ok) {
     return json({ message: "could not fetch quiz" }, { status: 500 });
   } else {

@@ -4,7 +4,6 @@ import Question from "./Question";
 import Summary from "./Summary";
 
 export default function Quiz({ questions }) {
-  console.log(questions);
   const answerRef = useRef({ answer: "" });
   const [isDisabled, setIsDisabled] = useState(true);
   const [userAnswers, setUserAnswers] = useState([]);
@@ -24,7 +23,7 @@ export default function Quiz({ questions }) {
   }
 
   if (quizIsComplete) {
-    return <Summary userAnswers={userAnswers} />;
+    return <Summary userAnswers={userAnswers} questions={questions}/>;
   }
   return (
     <div id="quiz">

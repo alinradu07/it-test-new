@@ -1,0 +1,53 @@
+.header {
+  width: 80%;
+  max-width: 80rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #2d4baa;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.list li {
+  list-style: none;
+}
+
+.list a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.list a:hover,
+.list a.active {
+  color: #fff;
+}
+
+.our-website {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 3em;
+  padding: 1.2em;
+}
+
+.menu-items {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding: 1em;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+}
