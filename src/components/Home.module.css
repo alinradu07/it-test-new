@@ -3,8 +3,8 @@
 .test-layout {
   border-radius: 0.5rem;
   background-color: #282c48;
-  width: 90%;
-  max-width: 80rem;
+  width: 60%;
+  max-width: 60rem;
   margin: 0 auto;
 }
 .content {
@@ -56,5 +56,10 @@
 @media screen and (max-height: 630px) {
   .dropdown {
     gap: 2em;
+  }
+}
+@media (width<=600px) {
+  .test-layout {
+    width: 90%;
   }
 }

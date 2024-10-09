@@ -8,6 +8,9 @@
 
 .header p {
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .header progress {
@@ -26,4 +29,10 @@
 .header progress::-webkit-progress-value {
   background: #655dcf;
   border-radius: 24px;
+}
+
+@media (width<=600px) {
+  .progress-text {
+    flex-direction: column;
+  }
 }

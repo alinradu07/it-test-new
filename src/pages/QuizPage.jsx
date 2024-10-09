@@ -4,11 +4,11 @@ import { Suspense } from "react";
 import Quiz from "../components/Quiz";
 
 export default function QuizPage() {
-  const { quiz } = useLoaderData();
+  const { quiz, discipline } = useLoaderData();
   return (
     <Suspense fallback={<p style={{ textAlign: "center" }}>Loading...</p>}>
       <Await resolve={quiz}>
-        {(loadedQuiz) => <Quiz questions={loadedQuiz} />}
+        {(loadedQuiz) => <Quiz questions={loadedQuiz} discipline={discipline} />}
       </Await>
     </Suspense>
   );
@@ -29,5 +29,6 @@ export function loader({ request }) {
   const searchTerm = url.searchParams.get("discipline");
   return defer({
     quiz: loadQuiz(searchTerm),
+    discipline: searchTerm,
   });
 }
