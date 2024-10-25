@@ -31,7 +31,7 @@ export default function Home() {
     };
     const { discipline, number, level } = selection;
     navigate(
-      `/quiz?discipline=${discipline}&questions=${number}&leve=${level}`
+      `/quiz?discipline=${discipline}&questions=${number}&level=${level}`
     );
   }
   let buttonIsDisabled = true;

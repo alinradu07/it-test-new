@@ -67,44 +67,11 @@
   color: red;
 }
 
-/* .global-class-name {
-  color: #00f5f7;
-  size: 20px;
-} */
-
-/* .answer button.correct .circle {
-  border-color: #00f5f7;
-  background-color: #00f5f7;
-} */
-
-/* .answer button.wrong .circle {
-  border-color: red;
-  background-color: red;
-} */
-
-/* .answer button.correct .circle .checkMark {
-  position: absolute;
-  transform: rotate(50deg) translate(-50%, -50%);
-  left: 25%;
-  top: 48%;
-  height: 10px;
-  width: 5px;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-} */
-
 .answer button .text {
   width: 90%;
   margin: 0;
 }
 
-/* @media (hover: hover) {
-  .answer.disabled {
-    pointer-events: none;
-  }
-} */
-
-/* button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  } */
+button:disabled {
+  cursor: not-allowed;
+}
