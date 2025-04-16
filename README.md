@@ -1,8 +1,19 @@
-# React + Vite
+# IT Test – Quiz Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##Overview:
+IT Test is a full-stack web application built with React on the frontend and Node.js on the backend. The app provides a quiz-style testing experience, where users can take IT-related quizzes and get immediate feedback. This project was created to improve my full-stack skills by combining interactive UI development with a basic backend server for handling quiz data.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Features:
+
+Quiz questions are dynamically rendered using React.
+Users can select answers and submit quizzes.
+Immediate scoring and feedback is shown after submission.
+Backend built with Node.js, which handles serving quiz data and basic API routing.
+
+##Technologies Used:
+
+-React
+-Node.js
+-JavaScript (ES6+)
+-HTML/CSS
