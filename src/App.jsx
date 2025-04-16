@@ -1,4 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import NotFoundPage from "./pages/NotFoundPage";
+import CustomErrorPage from "./pages/CustomErrorPage";
 import RootPage from "./pages/RootPage";
 import HomePage from "./pages/HomePage";
 import QuizPage, { loader as quizLoader } from "./pages/QuizPage";
@@ -7,6 +9,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootPage />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
@@ -16,6 +19,7 @@ const router = createBrowserRouter([
         path: "/quiz",
         element: <QuizPage />,
         loader: quizLoader,
+        errorElement: <CustomErrorPage />,
       },
     ],
   },
