@@ -26,7 +26,7 @@ To run this project locally, you'll need to have the following installed:
 ### Clone the repository:
 https://github.com/alinradu07/it-test-new.git
 ### Navigate to the project directory:
-cd cd it-test-new
+cd it-test-new
 ### Install frontend dependencies:
 npm install
 ### Install backend dependencies:
