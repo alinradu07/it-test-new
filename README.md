@@ -18,9 +18,9 @@ Backend built with Node.js, which handles serving quiz data and basic API routin
 
 ## Prerequisites
 To run this project locally, you'll need to have the following installed:
-Node.js
-npm (comes with Node.js)
-Git (optional, for cloning the repo)
+- Node.js
+- npm (comes with Node.js)
+- Git (optional, for cloning the repo)
 
 ## Installation
 ### Clone the repository:
